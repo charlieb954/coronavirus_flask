@@ -1,4 +1,5 @@
-from flask import request, Flask, render_template
+from flask import request, Flask, render_template, Markup
+from plotly.offline import plot
 import requests
 import json
 import pandas as pd
@@ -8,12 +9,15 @@ import plotly.graph_objs as go
 app = Flask(__name__)
 
 @app.route('/')
-def home():
+def home(div = None):
     resp = requests.get('https://pomber.github.io/covid19/timeseries.json')
     results = json.loads(resp.text)
     options = sorted(list(results.keys()))
-
-    return render_template('home.html', options=options)
+    
+    if div:
+        return render_template('home2.html', options=options, div = div)
+    else:
+        return render_template('home.html', options=options)
 
 @app.route('/', methods=['POST'])
 def confirmed_graph():
@@ -53,7 +57,8 @@ def confirmed_graph():
     
     fig.update_layout(title= f"{country} vs {country2} Coronavirus",
                       xaxis_title="Date",
-                      yaxis_title="Number of confirmed cases",
-                     )
+                      yaxis_title="Number of confirmed cases")
+    
+    div = plot(fig, output_type='div')
 
-    return home(), fig.show()
+    return home(div = Markup(div))

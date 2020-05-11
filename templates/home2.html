@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmed Coronavirus Cases</title>
+</head>
+<body>
+    <body style="font-family:Courier;color:chartreuse;background-color: darkslategrey;">
+    
+    <h1><u>Confirmed Coronavirus Case Comparison</u></h1>
+    <p>
+        Select two countries to compare and hit submit to be presented with an interactive graph.
+    </p>
+    <form method="POST">
+    <select name= options method="GET" action="/" >
+        {% for options in options %}
+        <option value= "{{ options }}" SELECTED>{{ options }}</option>"
+        {% endfor %}
+    </select>
+    <select name= options2 method="GET" action="/">
+        {% for options in options %}
+        <option value= "{{ options }}" SELECTED>{{ options }}</option>"
+        {% endfor %}
+    </select>
+    <input type="submit">
+
+    {{ div }}
+    </form>
+</body>
+</html>
