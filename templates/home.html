@@ -6,8 +6,7 @@
     <title>Confirmed Coronavirus Cases</title>
 </head>
 <body>
-    <body style="font-family:Courier;color:chartreuse;background-color: darkslategrey;">
-    
+    <body style="font-family:Courier;color:rgb(0, 0, 0);background-color: rgb(255, 255, 255);">
     <h1><u>Confirmed Coronavirus Case Comparison</u></h1>
     <p>
         Select two countries to compare and hit submit to be presented with an interactive graph.
@@ -24,6 +23,9 @@
         {% endfor %}
     </select>
     <input type="submit">
+    {% if div %}
+        {{ div }}
+    {% endif %}
     </form>
 </body>
 </html>

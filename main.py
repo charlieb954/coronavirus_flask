@@ -14,10 +14,7 @@ def home(div = None):
     results = json.loads(resp.text)
     options = sorted(list(results.keys()))
     
-    if div:
-        return render_template('home2.html', options=options, div = div)
-    else:
-        return render_template('home.html', options=options)
+    return render_template('home.html', options=options, div = div)
 
 @app.route('/', methods=['POST'])
 def confirmed_graph():
