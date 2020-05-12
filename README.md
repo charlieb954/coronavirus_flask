@@ -29,3 +29,5 @@ pip install -r requirements.txt       - Install the packages from the requiremen
 
 
 NOTES: when uploading to GitHub remove venv folder as well as __pycache__ (the file that contains the python code compiled for faster running)
+
+![](images/example.png)
