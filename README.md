@@ -13,19 +13,19 @@ Returns - Opens a new tab with an interactive HTML Plotly graph.
 1. git clone <url> for corona_virus_flask repository
 
 2. create a virtual environment
-  - python3 -m venv venv/       -Creates an environment called venv/ you can replace “venv/” with a different name for your environment.
+    - python3 -m venv venv/       -Creates an environment called venv/ you can replace “venv/” with a different name for your environment.
 
 3. activate the virtual envrionment
-  - source venv/bin/activate
+    - source venv/bin/activate
 
 4. set up and run Flask
-  - export FLASK_APP=main.py
-  - export FLASK_ENV=development
-  - flask run
+    - export FLASK_APP=main.py
+    - export FLASK_ENV=development
+    - flask run
 
 IF NECCESSARY -> Install requirements
-  - pip freeze > requirements.txt       - Store the current packages in a txt file
-  - pip install -r requirements.txt       - Install the packages from the requirements file
+    - pip freeze > requirements.txt       - Store the current packages in a txt file
+    - pip install -r requirements.txt       - Install the packages from the requirements file
 
 
 NOTES: when uploading to GitHub remove venv folder as well as __pycache__ (the file that contains the python code compiled for faster running)
