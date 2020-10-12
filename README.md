@@ -24,8 +24,8 @@ Returns - Opens a new tab with an interactive HTML Plotly graph.
     - flask run
 
 IF NECCESSARY -> Install requirements
-    - pip freeze > requirements.txt       - Store the current packages in a txt file
-    - pip install -r requirements.txt       - Install the packages from the requirements file
+   - pip freeze > requirements.txt       - Store the current packages in a txt file
+   - pip install -r requirements.txt       - Install the packages from the requirements file
 
 
 NOTES: when uploading to GitHub remove venv folder as well as __pycache__ (the file that contains the python code compiled for faster running)
