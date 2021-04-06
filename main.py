@@ -59,3 +59,7 @@ def confirmed_graph():
     div = plot(fig, output_type='div')
 
     return home(div = Markup(div))
+
+
+if __name__ == '__main__':
+    app.run()

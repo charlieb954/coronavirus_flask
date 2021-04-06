@@ -5,12 +5,12 @@ Uses a COVID19 API to compare 2 countries by the number of confirmed coronavirus
 
 Runs on a Flask app in browser.
 
-Returns - Opens a new tab with an interactive HTML Plotly graph.
+Returns - Interactive HTML Plotly graph.
 
 
 ## HOW TO USE
 
-1. git clone <url> for corona_virus_flask repository
+1. git clone &lt;url&gt; for corona_virus_flask repository
 
 2. create a virtual environment
     - python3 -m venv venv/       -Creates an environment called venv/ you can replace “venv/” with a different name for your environment.
@@ -18,16 +18,11 @@ Returns - Opens a new tab with an interactive HTML Plotly graph.
 3. activate the virtual envrionment
     - source venv/bin/activate
 
-4. set up and run Flask
-    - export FLASK_APP=main.py
-    - export FLASK_ENV=development
-    - flask run
-
-IF NECCESSARY -> Install requirements
-   - pip freeze > requirements.txt       - Store the current packages in a txt file
+4. IF NECCESSARY -> install requirements
    - pip install -r requirements.txt       - Install the packages from the requirements file
+   - pip freeze > requirements.txt       - Store the current packages in a txt file
 
 
-NOTES: when uploading to GitHub remove venv folder as well as __pycache__ (the file that contains the python code compiled for faster running)
+## EXAMPLE
 
 ![COVID FLASK](images/example.png)
